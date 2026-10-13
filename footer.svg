@@ -1,0 +1,76 @@
+<svg width="1000" height="180" viewBox="0 0 1000 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thanks for visiting - Chandu Lashari">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24243e">
+        <animate attributeName="stop-color" values="#24243e;#0b3d4f;#4b1d6b;#24243e" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.5" stop-color="#302b63">
+        <animate attributeName="stop-color" values="#302b63;#1a1a40;#0f766e;#302b63" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#0f0c29">
+        <animate attributeName="stop-color" values="#0f0c29;#0b3d4f;#0f0c29" dur="12s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="ftxt" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="550" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#00f5d4"/>
+      <stop offset="0.5" stop-color="#7b61ff"/>
+      <stop offset="1" stop-color="#ff4ecd"/>
+      <animate attributeName="x1" values="150;450;150" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="550;850;550" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <pattern id="fgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+
+    <filter id="fglow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="fround"><rect width="1000" height="180" rx="24"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#fround)">
+    <rect width="1000" height="180" fill="url(#fbg)"/>
+    <rect width="1000" height="180" fill="url(#fgrid)"/>
+
+    <!-- top waves -->
+    <path fill="#00f5d4" fill-opacity="0.13" d="M0 28 Q125 8 250 28 T500 28 T750 28 T1000 28 V0 H0 Z">
+      <animate attributeName="d" dur="6s" repeatCount="indefinite"
+        values="M0 28 Q125 8 250 28 T500 28 T750 28 T1000 28 V0 H0 Z;M0 28 Q125 48 250 28 T500 28 T750 28 T1000 28 V0 H0 Z;M0 28 Q125 8 250 28 T500 28 T750 28 T1000 28 V0 H0 Z"/>
+    </path>
+    <path fill="#7b61ff" fill-opacity="0.16" d="M0 16 Q125 36 250 16 T500 16 T750 16 T1000 16 V0 H0 Z">
+      <animate attributeName="d" dur="8s" repeatCount="indefinite"
+        values="M0 16 Q125 36 250 16 T500 16 T750 16 T1000 16 V0 H0 Z;M0 16 Q125 -4 250 16 T500 16 T750 16 T1000 16 V0 H0 Z;M0 16 Q125 36 250 16 T500 16 T750 16 T1000 16 V0 H0 Z"/>
+    </path>
+
+    <!-- floating particles -->
+    <g fill="#ffffff">
+      <circle cx="80" cy="170" r="2" opacity="0"><animate attributeName="cy" values="170;40;170" dur="8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="8s" repeatCount="indefinite"/></circle>
+      <circle cx="230" cy="175" r="1.5" opacity="0"><animate attributeName="cy" values="175;50;175" dur="10s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.6;0" dur="10s" repeatCount="indefinite"/></circle>
+      <circle cx="420" cy="172" r="2" opacity="0"><animate attributeName="cy" values="172;45;172" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="600" cy="176" r="2.5" opacity="0"><animate attributeName="cy" values="176;40;176" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="790" cy="170" r="1.5" opacity="0"><animate attributeName="cy" values="170;50;170" dur="11s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.6;0" dur="11s" repeatCount="indefinite"/></circle>
+      <circle cx="930" cy="174" r="2" opacity="0"><animate attributeName="cy" values="174;42;174" dur="9.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="9.5s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- message -->
+    <text x="500" y="82" text-anchor="middle" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="url(#ftxt)" filter="url(#fglow)">
+      Thanks for visiting — let's turn data into decisions
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="4s" repeatCount="indefinite"/>
+    </text>
+    <text x="500" y="112" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#9fb3c8" letter-spacing="1.5">
+      Chandu Lashari  •  Full-Stack Data Analyst  •  Open to collaborations
+    </text>
+
+    <!-- heartbeat / data pulse -->
+    <path d="M0 150 H180 L200 150 L215 120 L235 175 L250 140 L265 150 H480 L500 150 L515 115 L535 180 L550 135 L565 150 H760 L780 150 L795 125 L815 170 L830 145 L845 150 H1000"
+      fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0 150 H180 L200 150 L215 120 L235 175 L250 140 L265 150 H480 L500 150 L515 115 L535 180 L550 135 L565 150 H760 L780 150 L795 125 L815 170 L830 145 L845 150 H1000"
+      fill="none" stroke="#00f5d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="140 860" filter="url(#fglow)">
+      <animate attributeName="stroke-dashoffset" values="0;-1000" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
